@@ -16,8 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class ApplicationConfiguration {
     @Autowired
     UserRepo userRepo;
-
-
+    
     @Bean
     UserDetailsService userDetailsService() {
         return username -> userRepo.findByEmail(username)
